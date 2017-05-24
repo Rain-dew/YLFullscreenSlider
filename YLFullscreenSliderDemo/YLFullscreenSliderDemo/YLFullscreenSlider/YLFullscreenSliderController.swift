@@ -38,8 +38,15 @@ class YLFullscreenSliderController: UINavigationController {
 
         //4 创建自己的手势pan
         let panGes = UIPanGestureRecognizer()
+        panGes.delegate = self
         gesView.addGestureRecognizer(panGes)
         panGes.addTarget(target, action: action)
 
+    }
+}
+
+extension YLFullscreenSliderController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return self.viewControllers.count != 1
     }
 }
