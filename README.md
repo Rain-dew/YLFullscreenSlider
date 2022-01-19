@@ -1,10 +1,10 @@
 # YLFullscreenSlider Swift
 给导航控制器添加一个全屏滑动返回的手势。类似QQ.微博的效果
-##如何使用？
-###YLFullscreenSlider文件夹拖入你的项目
-###需要的导航栏继承YLFullscreenSliderController即可
-###你也可以拷贝下面代码到你的控制器实现
-##实现代码
+## 如何使用？
+### YLFullscreenSlider文件夹拖入你的项目
+### 需要的导航栏继承YLFullscreenSliderController即可
+### 你也可以拷贝下面代码到你的控制器实现
+## 实现代码
   ```Swift
      //1获取系统的pop手势
         guard let systemGes = interactivePopGestureRecognizer else { return }
@@ -51,5 +51,5 @@
         gesView.addGestureRecognizer(panGes)
         panGes.addTarget(target, action: action)
 ```
-##效果
+## 效果
 [image](http://og3u5glro.bkt.clouddn.com/push.gif)
